@@ -1,0 +1,33 @@
+RewriteEngine On
+
+RewriteRule ^accueil$ index.php
+
+RewriteRule ^a-propos$ about.php
+
+RewriteRule ^service$ services.php
+RewriteRule ^expériences$ projects.php
+RewriteRule ^gallérie$ blog.php
+
+RewriteRule ^contact$ contact.php
+
+RewriteRule ^blog$ blog-2.php
+
+RewriteRule ^envoyerMessage$ Recup_Contact.php
+
+
+RewriteRule ^good/([A-Za-z0-9-]+)/?$ good.php?ref=$1 [L,QSA]
+
+RewriteRule ^menu-details/([A-Za-z0-9-]+)/?$ menu-details.php?id_article=$1 [L,QSA]
+
+RewriteRule ^faq$ faq.html
+
+RewriteRule ^service$ service.html
+
+RewriteRule ^details$ service-details.html
+
+RewriteRule ^404$ 404.php
+
+ErrorDocument 404  http://localhost/probati/404
+
+#ErrorDocument 404  https://giselpay.com/404.php
+
